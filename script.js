@@ -82,11 +82,11 @@ function transport_to_server() {
 	if(!marker_once&&marker_valid_age&&marker_valid_input) {
 	      out_data();
 	        }
-// для работы через ajax нужно расскоментровать функцию prepare_xml() 
-// и закомментировать prepare_websocket()
+// для работы через веб сокет нужно расскоментровать функцию prepare_websocket() 
+// и закомментировать prepare_xml()
 
-      // prepare_xml();
-      prepare_websocket();	
+      prepare_xml();
+      // prepare_websocket();	
     }
 
 
