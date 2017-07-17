@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+	<form action="" id="frm" name="name_form" enctype="multipart/form-data">
+	<input type="text" id="last_name" name="last_name" placeholder="Фамилия" onkeyup="valid_input(this)">
+	<input type="text" id="first_name" name="first_name" placeholder="Имя" onkeyup="valid_input(this)">
+	<input type="text" id="patronymic" name="patronymic" placeholder="Отчество" onkeyup="valid_input(this)">
+	<input type="number" id="age" name="age" placeholder="Возраст" onkeyup="valid_age(this)">
+	<input type="button" onclick="transport_to_server()" value=" Сохранить">
+	</form>
+	
+<br>
+<div id="error"></div>
+<div id="error_age"></div>
+
+<div id="result_input"></div>
+<div id="result_output"></div>
+<div id="result_websocket_connect"></div>
+<div id="result_websocket"></div>
+
+
+	<script src="script.js"></script>
+</body>
+</html>
