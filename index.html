@@ -7,6 +7,7 @@
 	
 </head>
 <body>
+<h1>Первая часть задания</h1>
 	<form action="" id="frm" name="name_form" enctype="multipart/form-data">
 	<input type="text" id="last_name" name="last_name" placeholder="Фамилия" onkeyup="valid_input(this)">
 	<input type="text" id="first_name" name="first_name" placeholder="Имя" onkeyup="valid_input(this)">
@@ -23,6 +24,23 @@
 <div id="result_output"></div>
 <div id="result_websocket_connect"></div>
 <div id="result_websocket"></div>
+<hr>
+<h1>Вторая часть задания</h1>
+<p>Фамилия</p>
+<p id="out_last_name"></p>
+<p>Имя</p>
+<p id="out_first_name"></p>
+<p>Отчество</p>
+<p id="out_patronymic"></p>
+<p>Баланс</p>
+<p id="out_balance"></p>
+
+<button type="submit" onclick="transport_from_server()">Обновить баланс websocket</button>
+
+<p>Баланс</p>
+<p id="ajax_out_balance"></p>
+
+<button type="submit" onclick="ajax_transport_from_server()">Обновить баланс ajax</button>
 
 
 	<script src="script.js"></script>

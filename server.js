@@ -38,3 +38,32 @@ webSocketServer.on('connection', function(ws) {
 
 });
 
+// WebSocket-сервер на порту 8085
+var webSocketServer5 = new WebSocketServer.Server({
+  port: 8085
+});
+webSocketServer5.on('connection', function(ws) {
+
+  var id = Math.random();
+  clients[id] = ws;
+  console.log("новое соединение " + id);
+
+  ws.on('message', function(message) {
+    console.log('получено сообщение ' + message);
+	if (message) {
+	    for (var key in clients) {
+	    	
+	         clients[key].send("200 000 руб");
+	}
+	    
+	}
+
+  });
+
+  ws.on('close', function() {
+    console.log('соединение закрыто ' + id);
+    delete clients[id];
+  });
+
+});
+
